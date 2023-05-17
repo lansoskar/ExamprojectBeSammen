@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "774214201016",
+    "project_id": "examproject-besammen",
+    "storage_bucket": "examproject-besammen.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:774214201016:android:4bf26afa4c8e41f2534e4d",
+        "android_client_info": {
+          "package_name": "com.example.examprojectbesammen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "774214201016-322uulc5qj768rsfho4b1v638pc08q5t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5x4gSPfMjQKhMK6dYwwfDSnkv5O9uYpY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "774214201016-322uulc5qj768rsfho4b1v638pc08q5t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -10,5 +10,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        /* --------------------------------------------------------------------------------------
+        *
+        * KUN BRUGE MAIN ACTIVITY TIL AT TESTE OM APPEN FUNGERER
+        * IKKE SKRIV KODE HERINDE
+        *
+        * --------------------------------------------------------------------------------------*/
+
     }
 }
