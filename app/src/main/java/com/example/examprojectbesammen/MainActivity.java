@@ -14,7 +14,9 @@ public class MainActivity extends AppCompatActivity {
         *
         * KUN BRUGE MAIN ACTIVITY TIL AT TESTE OM APPEN FUNGERER
         * IKKE SKRIV KODE HERINDE
-        *
+        * LAV MAPPER TIL DET FUNKTIONALITET MAN LAVER (E.G ALLE JAVA FILER TIL USERCREATION + LOGON-
+          RYGER I SAMME MAPPE
+        * ALT KODE SKRIVES I ENGELSK
         * --------------------------------------------------------------------------------------*/
 
     }
