@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TipsAndTricksActivity">
+
+    <TextView
+        android:id="@+id/tipsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76sp"
+        android:text="@string/tips_r_d"
+        android:fontFamily="Montserrat-Bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="374dp"
+        android:layout_height="613dp"
+        android:layout_marginTop="1dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tipsTitle"
+        tools:ignore="TextSizeCheck">
+
+        <TextView
+            android:id="@+id/tipsHeadline"
+            android:layout_width="203sp"
+            android:layout_height="30sp"
+            android:layout_marginTop="50sp"
+            android:text="@string/samtalestarter" />
+
+        <TextView
+            android:id="@+id/tipsTextHeadline"
+            android:layout_width="295sp"
+            android:layout_height="46sp"
+            android:layout_marginTop="10sp"
+            android:text="@string/eksempel_p_nogle_samtalestartere"
+            android:textSize="15sp"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/tipsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35sp"
+            android:text="@string/hej_mit_navn_er_x_jeg_er_x_r_gammel_og_blev_diagnostiseret_med_angst_i_x_jeg_h_ber_at_denne_gruppe_kan_hj_lpe_mig_med_x" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35sp"
+            android:text="@string/i_hverdagen_oplever_jeg_x_er_der_andre_som_har_samme_oplevelser" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
