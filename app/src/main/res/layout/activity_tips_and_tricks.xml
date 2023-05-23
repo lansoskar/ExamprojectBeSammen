@@ -12,16 +12,15 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="76sp"
         android:text="@string/tips_r_d"
-        android:fontFamily="Montserrat-Bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:layout_width="374dp"
-        android:layout_height="613dp"
-        android:layout_marginTop="1dp"
+        android:layout_width="374sp"
+        android:layout_height="613sp"
+        android:layout_marginTop="1sp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
