@@ -22,6 +22,7 @@
         </activity>
         <activity android:name=".LogOnActivity"/>
         <activity android:name=".MenuActivity"/>
+        <activity android:name=".CreateUserActivity"/>
     </application>
 
 </manifest>
