@@ -5,4 +5,5 @@
     <string name="log_in">Log In</string>
     <string name="insert_email">Indsæt Email</string>
     <string name="insert_password">Indsæt kodeord</string>
+    <string name="menu">MENU</string>
 </resources>
