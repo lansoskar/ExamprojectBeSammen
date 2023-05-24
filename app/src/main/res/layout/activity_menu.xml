@@ -55,6 +55,7 @@
         android:backgroundTint="#17B68B"
         android:fontFamily="@font/montserrat_bold"
         android:text="@string/tips_og_r_d"
+        android:onClick="onTipsAndTricksMenuButtonClick"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
