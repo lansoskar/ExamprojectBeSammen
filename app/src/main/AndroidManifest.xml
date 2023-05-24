@@ -12,6 +12,9 @@
         android:theme="@style/Theme.ExamprojectBeSammen"
         tools:targetApi="31">
         <activity
+            android:name=".ChatActivity"
+            android:exported="false" />
+        <activity
             android:name=".IntroActivity"
             android:exported="true">
             <intent-filter>
@@ -20,8 +23,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LogOnActivity"/>
-        <activity android:name=".MenuActivity"/>
+        <activity android:name=".LogOnActivity" />
+        <activity android:name=".MenuActivity" />
+        <activity android:name=".TipsAndTricksActivity" />
+        <activity android:name=".ChatActivity" />
+
 
         <meta-data
             android:name="preloaded_fonts"
