@@ -5,9 +5,13 @@
     <string name="log_in">Log In</string>
     <string name="insert_email">Indsæt Email</string>
     <string name="insert_password">Indsæt kodeord</string>
-    <string name="eksempel_p_nogle_samtalestartere">Eksempel på nogle samtalestartere:</string>
-    <string name="samtalestarter">Samtalestarter:</string>
-    <string name="tips_r_d"><![CDATA[Tips & råd]]></string>
-    <string name="hej_mit_navn_er_x_jeg_er_x_r_gammel_og_blev_diagnostiseret_med_angst_i_x_jeg_h_ber_at_denne_gruppe_kan_hj_lpe_mig_med_x">“Hej mit navn er X. Jeg er X år gammel og blev diagnostiseret med angst i X. Jeg håber, at denne gruppe kan hjælpe mig med X.”</string>
-    <string name="i_hverdagen_oplever_jeg_x_er_der_andre_som_har_samme_oplevelser">“I hverdagen oplever jeg X. Er der andre, som har samme oplevelser?”</string>
+    <string name="menu">MENU</string>
+    <string name="din_profil">Din profil</string>
+    <string name="dine_samtaler">Dine Samtaler</string>
+    <string name="tips_og_r_d">Tips og råd</string>
+    <string name="tips_r_d" />
+    <string name="samtalestarter" />
+    <string name="eksempel_p_nogle_samtalestartere" />
+    <string name="hej_mit_navn_er_x_jeg_er_x_r_gammel_og_blev_diagnostiseret_med_angst_i_x_jeg_h_ber_at_denne_gruppe_kan_hj_lpe_mig_med_x" />
+    <string name="i_hverdagen_oplever_jeg_x_er_der_andre_som_har_samme_oplevelser" />
 </resources>
