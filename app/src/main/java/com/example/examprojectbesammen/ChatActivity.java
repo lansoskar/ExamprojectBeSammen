@@ -41,7 +41,7 @@ public class ChatActivity extends AppCompatActivity {
         setContentView(R.layout.activity_chat);
 
         firestore = FirebaseFirestore.getInstance();
-        messagesRef = firestore.collection("messages");
+        messagesRef = firestore.collection("Messages");
 
         recyclerView = findViewById(R.id.recyclerView);
         messageAdapter = new MessageAdapter();
@@ -96,6 +96,7 @@ public class ChatActivity extends AppCompatActivity {
                         for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
                             if (documentSnapshot.contains("text")) {
                                 String message = documentSnapshot.getString("text");
+
                                 messages.add(message);
                             }
                         }

@@ -19,7 +19,14 @@ public class MenuActivity extends AppCompatActivity {
             Intent intent = new Intent(MenuActivity.this, TipsAndTricksActivity.class);
             startActivity(intent);
         });
-
+        Button yourConversations = findViewById(R.id.chatMenuBtn);
+        yourConversations.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent toChat = new Intent(MenuActivity.this, ChatActivity.class);
+                startActivity(toChat);
+            }
+        });
         // Set click listeners for other menu buttons here
     }
 
