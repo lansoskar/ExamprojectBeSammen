@@ -1,4 +1,4 @@
-<<<<<<< Original<?xml version="1.0" encoding="utf-8"?><manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?><manifest xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:tools="http://schemas.android.com/tools">
 
 <application
@@ -25,7 +25,9 @@ xmlns:tools="http://schemas.android.com/tools">
     <activity android:name=".LogOnActivity" />
     <activity android:name=".MenuActivity" />
     <activity android:name=".TipsAndTricksActivity" />
+    <activity android:name=".CreateUserActivity"/>
     <activity android:name=".ChatActivity" />
+
 
 
     <meta-data
@@ -33,7 +35,7 @@ xmlns:tools="http://schemas.android.com/tools">
         android:resource="@array/preloaded_fonts" />
 </application>
 
-</manifest>=======
+</manifest>
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 <application>
@@ -43,4 +45,4 @@ xmlns:tools="http://schemas.android.com/tools">
 
         />
 </application>
-</manifest>>>>>>>> Added
+</manifest>
