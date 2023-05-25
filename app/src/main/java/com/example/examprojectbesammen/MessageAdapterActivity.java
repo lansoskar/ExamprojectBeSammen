@@ -1,86 +1,56 @@
 package com.example.examprojectbesammen;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class MessageAdapterActivity extends AppCompatActivity {
-    private RecyclerView recyclerView;
-    private MessageAdapter messageAdapter;
-    private List<String> messagesList;
+public class MessageAdapterActivity extends RecyclerView.Adapter<MessageAdapterActivity.MessageViewHolder> {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    private List<String> messages;
 
-        recyclerView = findViewById(R.id.recyclerView);
-        messagesList = new ArrayList<>(); // Initialize your list of messages
-
-        // Add some sample messages for testing
-        messagesList.add("Hello");
-        messagesList.add("How are you?");
-        messagesList.add("I'm fine, thank you!");
-
-        messageAdapter = new MessageAdapter(messagesList);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(messageAdapter);
+    public MessageAdapterActivity() {
+        this.messages = new ArrayList<>();
     }
 
-    // Your activity code...
+    public void setMessages(List<String> messages) {
+        this.messages = messages;
+        notifyDataSetChanged();
+    }
 
-    private static class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageViewHolder> {
+    @NonNull
+    @Override
+    public MessageViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_message, parent, false);
+        return new MessageViewHolder(view);
+    }
 
-        private List<String> messages;
+    @Override
+    public void onBindViewHolder(@NonNull MessageViewHolder holder, int position) {
+        String message = messages.get(position);
+        holder.bind(message);
+    }
 
-        public MessageAdapter(List<String> messages) {
-            this.messages = messages;
+    @Override
+    public int getItemCount() {
+        return messages.size();
+    }
+
+    public static class MessageViewHolder extends RecyclerView.ViewHolder {
+        private TextView messageTextView;
+
+        public MessageViewHolder(@NonNull View itemView) {
+            super(itemView);
+            messageTextView = itemView.findViewById(R.id.messageTextView);
         }
 
-        @NonNull
-        @Override
-        public MessageViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_message, parent, false);
-            return new MessageViewHolder(view);
-        }
-
-        @Override
-        public void onBindViewHolder(@NonNull MessageViewHolder holder, int position) {
-            String message = messages.get(position);
-            holder.bind(message);
-        }
-
-        @Override
-        public int getItemCount() {
-            return messages.size();
-        }
-
-        public static class MessageViewHolder extends RecyclerView.ViewHolder {
-            private TextView messageTextView;
-
-            public MessageViewHolder(@NonNull View itemView) {
-                super(itemView);
-                messageTextView = itemView.findViewById(R.id.messageTextView);
-            }
-
-            public void bind(String message) {
-                messageTextView.setText(message);
-            }
-        }
-
-        public void setMessages(List<String> messages) {
-            this.messages = messages;
-            notifyDataSetChanged();
+        public void bind(String message) {
+            messageTextView.setText(message);
         }
     }
 }
