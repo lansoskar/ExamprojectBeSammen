@@ -2,6 +2,8 @@ package com.example.examprojectbesammen;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
@@ -19,6 +21,9 @@ public class ChatActivity extends AppCompatActivity {
 
     private FirebaseFirestore firestore;
     private CollectionReference messagesRef;
+    private RecyclerView recyclerView;
+    private MessageAdapter messageAdapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +33,11 @@ public class ChatActivity extends AppCompatActivity {
 
         firestore = FirebaseFirestore.getInstance();
         messagesRef = firestore.collection("messages");
+
+        recyclerView = findViewById(R.id.recyclerView);
+        messageAdapter = new MessageAdapter();
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(messageAdapter);
     }
 
     private void sendMessage(String message) {

@@ -77,4 +77,10 @@ public class MessageAdapterActivity extends AppCompatActivity {
                 messageTextView.setText(message);
             }
         }
+
+        public void setMessages(List<String> messages) {
+            this.messages = messages;
+            notifyDataSetChanged();
+        }
     }
+}

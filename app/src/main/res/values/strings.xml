@@ -14,4 +14,6 @@
     <string name="eksempel_p_nogle_samtalestartere" />
     <string name="hej_mit_navn_er_x_jeg_er_x_r_gammel_og_blev_diagnostiseret_med_angst_i_x_jeg_h_ber_at_denne_gruppe_kan_hj_lpe_mig_med_x" />
     <string name="i_hverdagen_oplever_jeg_x_er_der_andre_som_har_samme_oplevelser" />
+    <string name="send">Send</string>
+    <string name="skriv_din_besked_her">Skriv din besked her..</string>
 </resources>
