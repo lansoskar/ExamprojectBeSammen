@@ -30,7 +30,7 @@ public class ChatActivity extends AppCompatActivity {
     private FirebaseFirestore firestore;
     private CollectionReference messagesRef;
     private RecyclerView recyclerView;
-    private MessageAdapterActivity.MessageAdapter messageAdapter;
+    private MessageAdapter messageAdapter;
     private EditText messageEditText;
     private Button sendButton;
 
@@ -44,7 +44,7 @@ public class ChatActivity extends AppCompatActivity {
         messagesRef = firestore.collection("messages");
 
         recyclerView = findViewById(R.id.recyclerView);
-        messageAdapter = new MessageAdapterActivity.MessageAdapter();
+        messageAdapter = new MessageAdapter();
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(messageAdapter);
 

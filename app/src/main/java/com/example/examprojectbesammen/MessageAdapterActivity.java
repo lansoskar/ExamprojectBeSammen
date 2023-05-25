@@ -1,4 +1,5 @@
 package com.example.examprojectbesammen;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,11 +11,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MessageAdapterActivity extends RecyclerView.Adapter<MessageAdapterActivity.MessageViewHolder> {
+class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageViewHolder> {
 
     private List<String> messages;
 
-    public void MessageAdapter() {
+    public MessageAdapter() {
         this.messages = new ArrayList<>();
     }
 
