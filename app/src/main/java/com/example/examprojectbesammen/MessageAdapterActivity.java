@@ -14,7 +14,7 @@ public class MessageAdapterActivity extends RecyclerView.Adapter<MessageAdapterA
 
     private List<String> messages;
 
-    public MessageAdapterActivity() {
+    public void MessageAdapter() {
         this.messages = new ArrayList<>();
     }
 
