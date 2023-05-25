@@ -36,7 +36,7 @@ class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageViewHold
         String message = messages.get(position);
         holder.bind(message);
     }
-
+//
     @Override
     public int getItemCount() {
         return messages.size();
