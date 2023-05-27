@@ -3,8 +3,8 @@
     <string name="BeSammen_logo_white_background">BeSammen Logo White Background</string>
     <string name="BeSammen_text_with_small_logo">BeSammen text with small logo</string>
     <string name="log_in">Log In</string>
-    <string name="insert_email">Indsæt Email</string>
-    <string name="insert_password">Indsæt kodeord</string>
+    <string name="insert_email">Indtast Email</string>
+    <string name="insert_password">Indtast kodeord</string>
     <string name="menu">MENU</string>
     <string name="din_profil">Din profil</string>
     <string name="dine_samtaler">Dine Samtaler</string>
