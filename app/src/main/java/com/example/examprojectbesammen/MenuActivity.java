@@ -27,7 +27,7 @@ public class MenuActivity extends AppCompatActivity {
                 startActivity(toChat);
             }
         });
-        // Set click listeners for other menu buttons here
+
     }
 
     public void onTipsAndTricksMenuButtonClick(View view) {

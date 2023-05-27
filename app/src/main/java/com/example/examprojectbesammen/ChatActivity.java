@@ -15,6 +15,8 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.Timestamp;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.EventListener;
@@ -24,6 +26,7 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -73,8 +76,15 @@ public class ChatActivity extends AppCompatActivity {
     }
 
     private void sendMessage(String message) {
+        String author = FirebaseAuth.getInstance().getCurrentUser().toString();
+
+        Date timestamp = new Date();
+
         Map<String, Object> data = new HashMap<>();
         data.put("text", message);
+        data.put("author", author);
+        data.put("timestamp", timestamp);
+
         messagesRef.add(data)
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
@@ -96,7 +106,7 @@ public class ChatActivity extends AppCompatActivity {
     }
 
     private void fetchMessages() {
-            messagesRef.addSnapshotListener(new EventListener<QuerySnapshot>() {
+            messagesRef.orderBy("timestamp").addSnapshotListener(new EventListener<QuerySnapshot>() {
                 @Override
                 public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
                     if (error != null) {
@@ -111,8 +121,17 @@ public class ChatActivity extends AppCompatActivity {
                             }
                         }
                         messageAdapter.setMessages(messages);
+                        scrollToLastMessage();
                     }
                 }
             });
+    }
+    private void scrollToLastMessage(){
+        recyclerView.post(new Runnable() {
+            @Override
+            public void run() {
+                recyclerView.scrollToPosition(messageAdapter.getItemCount() - 1);
+            }
+        });
     }
 }
