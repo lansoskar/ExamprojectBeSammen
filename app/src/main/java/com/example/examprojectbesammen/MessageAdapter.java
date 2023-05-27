@@ -15,12 +15,12 @@ class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageViewHold
 
     private List<String> messages;
 
-    public MessageAdapter() {
-        this.messages = new ArrayList<>();
+    public MessageAdapter(List<String> messages) {
+        this.messages = messages != null ? messages : new ArrayList<>();
     }
 
     public void setMessages(List<String> messages) {
-        this.messages = messages;
+        this.messages = messages != null ? messages : new ArrayList<>();
         notifyDataSetChanged();
     }
 
