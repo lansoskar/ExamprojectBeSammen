@@ -11,6 +11,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -32,6 +33,8 @@ public class CreateUserActivity extends AppCompatActivity {
 
         FirebaseAuth auth = FirebaseAuth.getInstance();
         Button createUserBtn = findViewById(R.id.button3);
+        createUserBtn.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.teal_700));
+
 
 
         createUserBtn.setOnClickListener(new View.OnClickListener() {

@@ -2,24 +2,26 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="411dp"
+    android:layout_height="730dp"
     tools:context=".ChatActivity" >
 
     <LinearLayout
-        android:layout_width="391dp"
-        android:layout_height="783dp"
+        android:layout_width="350dp"
+        android:layout_height="600dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.262"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
+            android:layout_width="185dp"
+            android:layout_height="380dp"
+            android:layout_weight="1"
+            tools:layout_editor_absoluteY="-29dp" />
 
         <EditText
             android:id="@+id/messageEditText"
@@ -31,6 +33,8 @@
             android:id="@+id/sendButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounder"
+            android:backgroundTint="#17B68B"
             android:text="@string/send" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,6 +14,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/rounder"
+        android:backgroundTint="@color/teal_200"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
@@ -51,6 +53,8 @@
         android:layout_marginTop="29dp"
         android:layout_marginEnd="98dp"
         android:layout_marginBottom="77dp"
+        android:backgroundTint="#17B68B"
+        android:background="@drawable/rounder"
         android:text="Opret bruger"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -11,6 +11,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -30,6 +31,8 @@ public class LogOnActivity extends AppCompatActivity {
 
         Button logInUserBtn = findViewById(R.id.button);
         Button createUserBtn = findViewById(R.id.button2);
+        logInUserBtn.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.teal_700));
+        createUserBtn.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.teal_500));
 
         logInUserBtn.setOnClickListener(new View.OnClickListener() {
             @Override
