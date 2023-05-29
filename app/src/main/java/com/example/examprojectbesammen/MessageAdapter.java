@@ -1,8 +1,11 @@
 package com.example.examprojectbesammen;
 
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -46,17 +49,15 @@ class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageViewHold
 
         holder.bind(text);
         if (loggedInUser.equals(author)) {
-            holder.messageTextView.setBackgroundColor(ContextCompat.getColor(holder.itemView.getContext(), R.color.teal_700));
-            ConstraintLayout.LayoutParams layoutParams = (ConstraintLayout.LayoutParams) holder.messageTextView.getLayoutParams();
-            layoutParams.startToStart = ConstraintLayout.LayoutParams.UNSET;
-            layoutParams.endToEnd = holder.itemView.getId();
-            holder.messageTextView.setLayoutParams(layoutParams);
+            holder.messageTextView.setBackgroundResource(R.drawable.authormessage);
+            holder.messageTextView.setGravity(Gravity.END);
+            holder.messageTextView.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+
         } else {
-            holder.messageTextView.setBackgroundColor(ContextCompat.getColor(holder.itemView.getContext(), R.color.teal_500));
-            ConstraintLayout.LayoutParams layoutParams = (ConstraintLayout.LayoutParams) holder.messageTextView.getLayoutParams();
-            layoutParams.startToStart = holder.itemView.getId();
-            layoutParams.endToEnd = ConstraintLayout.LayoutParams.UNSET;
-            holder.messageTextView.setLayoutParams(layoutParams);
+            holder.messageTextView.setBackgroundResource(R.drawable.othermessage);
+            holder.messageTextView.setGravity(Gravity.START);
+            holder.messageTextView.setLayoutDirection(View.LAYOUT_DIRECTION_LTR);
+
         }
 
     }
@@ -72,6 +73,9 @@ class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageViewHold
         public MessageViewHolder(@NonNull View itemView) {
             super(itemView);
             messageTextView = itemView.findViewById(R.id.messageTextView);
+
+
+
         }
 
         public void bind(String message) {

@@ -30,6 +30,7 @@ public class CreateUserActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_createuser);
+        getSupportActionBar().hide();
 
         FirebaseAuth auth = FirebaseAuth.getInstance();
         Button createUserBtn = findViewById(R.id.button3);
