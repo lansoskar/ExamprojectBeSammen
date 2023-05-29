@@ -10,6 +10,7 @@ import androidx.core.content.ContextCompat;
 
 public class MenuActivity extends AppCompatActivity {
 
+    //Oskar, David, Lasse
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +41,7 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
+        //Oskar, Lasse, David, Gustav
         profileBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,6 +52,7 @@ public class MenuActivity extends AppCompatActivity {
 
     }
 
+    //Lasse, Oskar
     public void onTipsAndTricksMenuButtonClick(View view) {
         Intent intent = new Intent(MenuActivity.this, TipsAndTricksActivity.class);
         startActivity(intent);

@@ -12,6 +12,7 @@ import androidx.core.content.ContextCompat;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class ProfileActivity extends AppCompatActivity {
+    //Oskar, David
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +30,8 @@ public class ProfileActivity extends AppCompatActivity {
 
     }
     //methods to back button on action bar
+
+    //Oskar
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
             onBackPressed();
@@ -36,6 +39,7 @@ public class ProfileActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
 
     public void onBackPressed() {
         super.onBackPressed();

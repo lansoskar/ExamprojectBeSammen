@@ -47,6 +47,7 @@ public class ChatActivity extends AppCompatActivity {
 
     private List<String> messages;
 
+    //Oskar, Lasse, Gustav, David
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,7 +76,7 @@ public class ChatActivity extends AppCompatActivity {
 
         sendButton.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.teal_700));
 
-
+//Lasse, David
         sendButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -90,6 +91,7 @@ public class ChatActivity extends AppCompatActivity {
 
     }
 
+    //Oskar, Lasse, David
     private void sendMessage(String message) {
         String author = FirebaseAuth.getInstance().getCurrentUser().getEmail();
 
@@ -120,6 +122,7 @@ public class ChatActivity extends AppCompatActivity {
                 });
     }
 
+    //Oskar, Lasse, Gustav, David
     private void fetchMessages() {
         messagesRef.orderBy("timestamp").addSnapshotListener(new EventListener<QuerySnapshot>() {
             @Override
@@ -147,6 +150,8 @@ public class ChatActivity extends AppCompatActivity {
             }
         });
     }
+
+    //Oskar, Lasse
     private void scrollToLastMessage(){
         recyclerView.post(new Runnable() {
             @Override
@@ -157,6 +162,8 @@ public class ChatActivity extends AppCompatActivity {
     }
 
     //methods to back button on action bar
+
+    //Oskar
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
             onBackPressed();

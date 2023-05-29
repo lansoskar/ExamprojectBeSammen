@@ -33,6 +33,7 @@ class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageViewHold
         notifyDataSetChanged();
     }
 
+    //Lasse, David
     @NonNull
     @Override
     public MessageViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -40,6 +41,7 @@ class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageViewHold
         return new MessageViewHolder(view);
     }
 
+    //Gustav, Lasse
     @Override
     public void onBindViewHolder(@NonNull MessageViewHolder holder, int position) {
         String message = messages.get(position);
@@ -62,6 +64,7 @@ class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageViewHold
 
     }
 
+    //Lasse, David
     @Override
     public int getItemCount() {
         return messages.size();

@@ -37,7 +37,7 @@ public class CreateUserActivity extends AppCompatActivity {
         createUserBtn.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.teal_700));
 
 
-
+//Oskar, David, Gustav
         createUserBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -96,12 +96,14 @@ public class CreateUserActivity extends AppCompatActivity {
     private static final Pattern PasswordPattern = Pattern.compile("^(?=.*\\d).{8,}$"); //password pattern chatgpt gave me,-
     // -asked for at least 8 characters and at least 1 number
 
+    //Oskar, David, Lasse, Gustav
     private boolean validateEmail(String email) {
         if (!EmailPattern.matcher(email).matches()) {
             Toast.makeText(CreateUserActivity.this, "Invalid Email", Toast.LENGTH_LONG).show();
         }
         return EmailPattern.matcher(email).matches(); // returns true if email matches pattern
     }
+
 
     private boolean validatePassword(String password) {
         if (!PasswordPattern.matcher(password).matches()) {

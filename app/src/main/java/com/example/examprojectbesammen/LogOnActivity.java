@@ -20,7 +20,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class LogOnActivity extends AppCompatActivity {
-//Oskar
+//Oskar, David, Lasse, Gustav
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,6 +58,7 @@ public class LogOnActivity extends AppCompatActivity {
             }
         });
 
+        //Oskar, David, Gustav
         createUserBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
