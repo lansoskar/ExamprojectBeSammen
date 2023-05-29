@@ -14,6 +14,7 @@ public class MenuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+        getSupportActionBar().hide();
 
         Button tipsAndTricksMenuBtn = findViewById(R.id.tipsAndTricksMenuBtn);
         tipsAndTricksMenuBtn.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.teal_500));

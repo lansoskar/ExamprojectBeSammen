@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,6 +21,7 @@ import com.google.firebase.Timestamp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
@@ -48,12 +50,13 @@ public class ChatActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         FirebaseApp.initializeApp(this);
         setContentView(R.layout.activity_chat);
+        getSupportActionBar().hide();
 
         firestore = FirebaseFirestore.getInstance();
         messagesRef = firestore.collection("Messages");
 
         recyclerView = findViewById(R.id.recyclerView);
-        messageAdapter = new MessageAdapter(messages);
+        messageAdapter = new MessageAdapter(messages, FirebaseAuth.getInstance().getCurrentUser().getEmail());
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(messageAdapter);
 
@@ -82,7 +85,7 @@ public class ChatActivity extends AppCompatActivity {
     }
 
     private void sendMessage(String message) {
-        String author = FirebaseAuth.getInstance().getCurrentUser().toString();
+        String author = FirebaseAuth.getInstance().getCurrentUser().getEmail();
 
         Date timestamp = new Date();
 
@@ -112,25 +115,31 @@ public class ChatActivity extends AppCompatActivity {
     }
 
     private void fetchMessages() {
-            messagesRef.orderBy("timestamp").addSnapshotListener(new EventListener<QuerySnapshot>() {
-                @Override
-                public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
-                    if (error != null) {
-                        Toast.makeText(ChatActivity.this, "Error fetching messages", Toast.LENGTH_SHORT).show();
-                    }
-                    if (value != null) {
-                        List<String> messages = new ArrayList<>();
-                        for (QueryDocumentSnapshot documentSnapshot : value) {
-                            if (documentSnapshot.contains("text")) {
-                                String message = documentSnapshot.getString("text");
-                                messages.add(message);
-                            }
-                        }
-                        messageAdapter.setMessages(messages);
-                        scrollToLastMessage();
-                    }
+        messagesRef.orderBy("timestamp").addSnapshotListener(new EventListener<QuerySnapshot>() {
+            @Override
+            public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
+                if (error != null) {
+                    Toast.makeText(ChatActivity.this, "Error fetching messages", Toast.LENGTH_SHORT).show();
                 }
-            });
+                if (value != null) {
+                    List<String> messages = new ArrayList<>();
+                    String loggedInUserId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+
+                    for (QueryDocumentSnapshot documentSnapshot : value) {
+                        if (documentSnapshot.contains("text")) {
+                            String text = documentSnapshot.getString("text");
+                            String author = documentSnapshot.getString("author");
+
+                            String message = author + ": " + text;
+                            messages.add(message);
+
+                        }
+                    }
+                    messageAdapter.setMessages(messages);
+                    scrollToLastMessage();
+                }
+            }
+        });
     }
     private void scrollToLastMessage(){
         recyclerView.post(new Runnable() {
@@ -140,4 +149,5 @@ public class ChatActivity extends AppCompatActivity {
             }
         });
     }
+
 }

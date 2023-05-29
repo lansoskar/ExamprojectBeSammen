@@ -5,6 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="213dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="182dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="62dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.045"
+        app:srcCompat="@drawable/besammentextlogo" />
+
     <Button
         android:id="@+id/button"
         android:layout_width="218dp"
@@ -15,7 +31,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         android:background="@drawable/rounder"
-        android:backgroundTint="@color/teal_200"
+        android:backgroundTint="@color/teal_500"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
@@ -25,6 +41,7 @@
         android:ems="10"
         android:hint="@string/insert_email"
         android:inputType="textEmailAddress"
+        android:background="@drawable/inputfield_border"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,6 +57,7 @@
         android:ems="10"
         android:hint="@string/insert_password"
         android:inputType="textPassword"
+        android:background="@drawable/inputfield_border"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
