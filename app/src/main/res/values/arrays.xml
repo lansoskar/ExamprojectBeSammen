@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="diagnoses">
+        <item>Ingen valgt</item>
+        <item>Angst</item>
+        <item>Kræft</item>
+        <item>Depression</item>
+        <item>Autisme</item>
+    </string-array>
+
+</resources>

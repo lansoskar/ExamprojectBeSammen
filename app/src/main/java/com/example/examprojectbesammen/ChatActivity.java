@@ -7,8 +7,10 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -50,7 +52,11 @@ public class ChatActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         FirebaseApp.initializeApp(this);
         setContentView(R.layout.activity_chat);
-        getSupportActionBar().hide();
+        getSupportActionBar().setTitle("gruppechat: x");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
+
 
         firestore = FirebaseFirestore.getInstance();
         messagesRef = firestore.collection("Messages");
@@ -150,4 +156,18 @@ public class ChatActivity extends AppCompatActivity {
         });
     }
 
+    //methods to back button on action bar
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent toMenu = new Intent(ChatActivity.this, MenuActivity.class);
+        startActivity(toMenu);
+    }
 }

@@ -40,6 +40,14 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
+        profileBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent toProfile = new Intent(MenuActivity.this, ProfileActivity.class);
+                startActivity(toProfile);
+            }
+        });
+
     }
 
     public void onTipsAndTricksMenuButtonClick(View view) {

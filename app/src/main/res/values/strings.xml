@@ -6,7 +6,7 @@
     <string name="insert_email">Indtast Email</string>
     <string name="insert_password">Indtast kodeord</string>
     <string name="menu">Menu</string>
-    <string name="din_profil">Din profil</string>
+    <string name="din_profil">Din Profil</string>
     <string name="dine_samtaler">Dine Samtaler</string>
     <string name="tips_og_r_d">Tips og råd</string>
     <string name="tips_r_d" />
@@ -16,4 +16,9 @@
     <string name="i_hverdagen_oplever_jeg_x_er_der_andre_som_har_samme_oplevelser" />
     <string name="send">Send</string>
     <string name="skriv_din_besked_her">Skriv din besked her..</string>
+    <string name="get_current_username">username</string>
+    <string name="diagnose">Diagnose</string>
+    <string name="age">age</string>
+    <string name="gendan_kodeord">gendan kodeord</string>
+    <string name="log_ud">log ud</string>
 </resources>

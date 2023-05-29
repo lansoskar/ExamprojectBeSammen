@@ -25,6 +25,7 @@ xmlns:tools="http://schemas.android.com/tools">
     <activity android:name=".TipsAndTricksActivity" />
     <activity android:name=".CreateUserActivity"/>
     <activity android:name=".ChatActivity" />
+    <activity android:name=".ProfileActivity"/>
 
     <meta-data
         android:name="preloaded_fonts"
