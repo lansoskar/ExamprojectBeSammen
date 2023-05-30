@@ -8,28 +8,27 @@
 
     <LinearLayout
         android:layout_width="414dp"
-        android:layout_height="728dp"
+        android:layout_height="650dp"
         android:orientation="vertical"
         android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.512">
+        app:layout_constraintVertical_bias="0.0">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_width="367dp"
+            android:layout_height="549dp"
             android:layout_marginEnd="8dp"
+            android:layout_weight="1"
             tools:layout_editor_absoluteY="-29dp" />
 
         <LinearLayout
-            android:layout_width="397dp"
-            android:layout_height="wrap_content"
-            >
+            android:layout_width="382dp"
+            android:layout_height="wrap_content">
 
             <EditText
                 android:id="@+id/messageEditText"
@@ -41,8 +40,8 @@
             <Button
                 android:id="@+id/sendButton"
                 android:layout_width="100dp"
-                android:layout_marginStart="6dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
                 android:background="@drawable/rounder"
                 android:backgroundTint="#17B68B"
                 android:text="@string/send" />
