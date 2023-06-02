@@ -93,8 +93,8 @@ public class CreateUserActivity extends AppCompatActivity {
 
     private static final Pattern EmailPattern = Pattern.compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
             + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$"); // email regex pattern found online
-    private static final Pattern PasswordPattern = Pattern.compile("^(?=.*\\d).{8,}$"); //password pattern chatgpt gave me,-
-    // -asked for at least 8 characters and at least 1 number
+    private static final Pattern PasswordPattern = Pattern.compile("^(?=.*\\d).{8,}$"); //paassword pttern found online,-
+    // -needs at least 8 characters and at least 1 number
 
     //Oskar, David, Lasse, Gustav
     private boolean validateEmail(String email) {
