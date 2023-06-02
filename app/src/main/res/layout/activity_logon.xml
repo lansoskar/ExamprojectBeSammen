@@ -5,17 +5,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="285dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="62dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.092"
+        app:srcCompat="@drawable/besammentextlogo" />
+
     <Button
         android:id="@+id/button"
         android:layout_width="218dp"
         android:layout_height="72dp"
+        android:layout_marginTop="488dp"
         android:text="@string/log_in"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.816" />
+        android:background="@drawable/rounder"
+        android:backgroundTint="@color/teal_500"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextTextEmailAddress"
@@ -24,6 +39,7 @@
         android:ems="10"
         android:hint="@string/insert_email"
         android:inputType="textEmailAddress"
+        android:background="@drawable/inputfield_border"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,8 +55,25 @@
         android:ems="10"
         android:hint="@string/insert_password"
         android:inputType="textPassword"
+        android:background="@drawable/inputfield_border"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="215dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="98dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="98dp"
+        android:layout_marginBottom="77dp"
+        android:backgroundTint="#17B68B"
+        android:background="@drawable/rounder"
+        android:text="Opret bruger"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 </androidx.constraintlayout.widget.ConstraintLayout>

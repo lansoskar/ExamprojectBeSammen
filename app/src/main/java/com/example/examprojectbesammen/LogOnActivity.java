@@ -11,6 +11,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -19,16 +20,20 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class LogOnActivity extends AppCompatActivity {
-//Oskar
+//Oskar, David, Lasse, Gustav
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logon);
+        getSupportActionBar().hide();
 
         FirebaseApp.initializeApp(this);
         FirebaseAuth auth = FirebaseAuth.getInstance();
 
         Button logInUserBtn = findViewById(R.id.button);
+        Button createUserBtn = findViewById(R.id.button2);
+        logInUserBtn.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.teal_700));
+        createUserBtn.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.teal_500));
 
         logInUserBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +55,15 @@ public class LogOnActivity extends AppCompatActivity {
                         }
                     }
                 });
+            }
+        });
+
+        //Oskar, David, Gustav
+        createUserBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent toCreateUser = new Intent(LogOnActivity.this, CreateUserActivity.class);
+                startActivity(toCreateUser);
             }
         });
     }

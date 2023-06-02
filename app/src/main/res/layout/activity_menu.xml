@@ -7,26 +7,42 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="227dp"
+
+        android:layout_width="226dp"
         android:layout_height="96dp"
-        android:layout_marginTop="80dp"
-        android:fontFamily="@font/montserrat_bold"
+        android:layout_marginTop="108dp"
         android:text="@string/menu"
         android:textAlignment="center"
         android:textColor="#147780"
         android:textSize="50sp"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="213dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginEnd="18dp"
+
+        android:layout_marginBottom="62dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.025"
+        app:srcCompat="@drawable/besammentextlogo" />
 
     <Button
         android:id="@+id/chatMenuBtn"
         android:layout_width="240dp"
         android:layout_height="75dp"
         android:layout_marginTop="60dp"
+        android:background="@drawable/rounder"
         android:backgroundTint="#147780"
-        android:fontFamily="@font/montserrat_bold"
         android:text="@string/dine_samtaler"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,8 +55,8 @@
         android:layout_width="200dp"
         android:layout_height="65dp"
         android:layout_marginTop="60dp"
+        android:background="@drawable/rounder"
         android:backgroundTint="#17B68B"
-        android:fontFamily="@font/montserrat_bold"
         android:text="@string/din_profil"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -52,8 +68,8 @@
         android:layout_width="200dp"
         android:layout_height="60dp"
         android:layout_marginTop="60dp"
+        android:background="@drawable/rounder"
         android:backgroundTint="#17B68B"
-        android:fontFamily="@font/montserrat_bold"
         android:text="@string/tips_og_r_d"
         android:onClick="onTipsAndTricksMenuButtonClick"
         app:layout_constraintEnd_toEndOf="parent"

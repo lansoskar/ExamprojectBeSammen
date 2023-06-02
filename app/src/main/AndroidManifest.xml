@@ -1,4 +1,4 @@
-<<<<<<< Original<?xml version="1.0" encoding="utf-8"?><manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?><manifest xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:tools="http://schemas.android.com/tools">
 
 <application
@@ -10,9 +10,7 @@ xmlns:tools="http://schemas.android.com/tools">
     android:supportsRtl="true"
     android:theme="@style/Theme.ExamprojectBeSammen"
     tools:targetApi="31">
-    <activity
-        android:name=".ChatActivity"
-        android:exported="false" />
+
     <activity
         android:name=".IntroActivity"
         android:exported="true">
@@ -25,22 +23,13 @@ xmlns:tools="http://schemas.android.com/tools">
     <activity android:name=".LogOnActivity" />
     <activity android:name=".MenuActivity" />
     <activity android:name=".TipsAndTricksActivity" />
+    <activity android:name=".CreateUserActivity"/>
     <activity android:name=".ChatActivity" />
-
+    <activity android:name=".ProfileActivity"/>
 
     <meta-data
         android:name="preloaded_fonts"
         android:resource="@array/preloaded_fonts" />
 </application>
 
-</manifest>=======
-
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
-<application>
-    <activity
-        android:name="com.example.examprojectbesammen.MessageAdapterActivity"
-        android:exported="false"
-
-        />
-</application>
-</manifest>>>>>>>> Added
+</manifest>
